@@ -29,3 +29,31 @@ focus --class ~.domain.Store
 field string --fieldName name --notNull true
 field other --fieldName address --type ~.domain.Address --notNull true
 // Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-03-18 17:34:16
+entity jpa --class ~.domain.Person --abstract --activeRecord false
+field string --fieldName firstName --notNull true --sizeMin 2
+field string --fieldName middleName 
+field string --fieldName lastName --notNull true --sizeMin 2
+field other --fieldName addresss --type ~.domain.Address --notNull true
+field date --fieldName dob --type java.util.Date
+field boolean --fieldName status --value true
+field email template 
+field string --fieldName email --regexp \b[A-Z0-9._%+-]+@(?:[A-Z0-9-]+\.)+[A-Z]{2,4}\b
+field number --fieldName phoneNumber --type java.lang.Integer --min 10
+enum type --class ~.constant.Salutation
+enum type --class ~.constant.Gender
+entity jpa --class ~.domain.Schedule
+entity jpa --class ~.domain.ScheduleRule
+entity jpa --class ~.domain.StoreRule
+entity jpa --class ~.domain.EmployeeRule
+entity jpa --class ~.domain.EmployeeScheduleRule
+entity jpa --class ~.domain.StoreSalesData
+entity jpa --class ~.domain.Customer
+entity jpa --class ~.domain.Employee
+hint
+hint logging
+logging setup --level DEBUG 
+hint
+service all --interfacePackage com.bfi.schedulegrab.service
+web mvc setup
+web mvc all --package com.bfi.schedulegrab.controller
+web mvc all --package com.bfi.schedulegrab.controller
