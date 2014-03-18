@@ -1,0 +1,31 @@
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-03-18 16:55:56
+addon create simple --topLevelPackage com.bfi.schedulegrab --description ""
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-03-18 16:56:13
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-03-18 17:02:18
+hint
+// [failed] jpa setup --database HYPERSONIC_IN_MEMORY --provider HIBERNATE 
+// [failed] jpa setup --database HYPERSONIC_IN_MEMORY --provider HIBERNATE 
+jpa setup --database HYPERSONIC_IN_MEMORY --provider HIBERNATE 
+hint
+entity jpa --class com.bfi.schedulegrab.domain.Address
+field string --fieldName address1 --notNull true
+field string --fieldName address2
+field string --fieldName city --notNull true 
+// [failed] field string --fieldName city --notNull true 
+// [failed] enum type --class com.bfi.schedulegrab.constant.State 
+enum type --class com.bfi.schedulegrab.constant.States 
+entity jpa --class com.bfi.schedulegrab.domain.Address
+jpa setup --database HYPERSONIC_IN_MEMORY --provider HIBERNATE 
+field string --fieldName address1 --notNull true
+field string --fieldName address2
+field string --fieldName city --notNull true 
+// [failed] field enum --type ~.constant.States --fieldName state
+field enum --type ~.constant.States --fieldName usState
+field number --fieldName zipcode --type java.lang.Integer --min 6 --max 6 --notNull true
+entity jpa --class com.bfi.schedulegrab.Store 
+// [failed] field string --fieldName name --notNull true
+// [failed] focus --class ~.domain.Store
+focus --class ~.domain.Store
+field string --fieldName name --notNull true
+field other --fieldName address --type ~.domain.Address --notNull true
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-03-18 17:34:16
