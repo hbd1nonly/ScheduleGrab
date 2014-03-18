@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_bfi_schedulegrab_domain_Address" items="${addresses}" z="duAVA+hNCL2jUHLhDSyzTPktpF8=">
+        <table:table data="${addresses}" id="l_com_bfi_schedulegrab_domain_Address" path="/addresses" z="Egeu/r1SP3WzzJhhA5bqhHPDz8Q=">
+            <table:column id="c_com_bfi_schedulegrab_domain_Address_address1" property="address1" z="AWwkd20MsWztiC1H4ugKEzyxLsA="/>
+            <table:column id="c_com_bfi_schedulegrab_domain_Address_address2" property="address2" z="dIV2LuDj/ZEFVG59KFq9znNnfOw="/>
+            <table:column id="c_com_bfi_schedulegrab_domain_Address_city" property="city" z="r1t40oEWRaGE7H8+oasfMiHUe2c="/>
+            <table:column id="c_com_bfi_schedulegrab_domain_Address_usState" property="usState" z="75eIeTgE0hO9ql8zRvR5ypIxg0w="/>
+            <table:column id="c_com_bfi_schedulegrab_domain_Address_zipcode" property="zipcode" z="UxBWBxWyLXmmVEhw8RpsdfkzlM8="/>
+        </table:table>
+    </page:list>
+</div>
