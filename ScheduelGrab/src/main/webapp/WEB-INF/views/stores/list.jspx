@@ -6,6 +6,7 @@
         <table:table data="${stores}" id="l_com_bfi_schedulegrab_domain_Store" path="/stores" z="aj+NPq8aSyl2uxWnW5dSkmZOUsg=">
             <table:column id="c_com_bfi_schedulegrab_domain_Store_name" property="name" z="dwarqb+XyHhncBANprVSW2WTvgs="/>
             <table:column id="c_com_bfi_schedulegrab_domain_Store_address" property="address" z="FF9BiPfxiSaRd0Z19JEzEfGN5f4="/>
+            <table:column id="c_com_bfi_schedulegrab_domain_Store_assignedManager" property="assignedManager" z="ZLhajugZaPXvSsSFjk5V8s+4GyU="/>
         </table:table>
     </page:list>
 </div>

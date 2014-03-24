@@ -11,5 +11,13 @@
             <menu:item id="i_store_new" messageCode="global_menu_new" url="/stores?form" z="Vt7hKrPJoE2CsWghSjOTcY4uGG8="/>
             <menu:item id="i_store_list" messageCode="global_menu_list" url="/stores?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Dbkmq2LBGNN0iglCHyLZUWyVNh0="/>
         </menu:category>
+        <menu:category id="c_customer" z="Wa+bVSiDyYo/wX1nGU1B/z+OKhE=">
+            <menu:item id="i_customer_new" messageCode="global_menu_new" url="/customers?form" z="d9+YIotZHp6KZLGKwwnMVzPvh8k="/>
+            <menu:item id="i_customer_list" messageCode="global_menu_list" url="/customers?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Yo9cUtyc7EUvbxwQ7EoeqXWaVJM="/>
+        </menu:category>
+        <menu:category id="c_employee" z="sxLyQbJ/qSw9Reoi1NHvJhkZ/rU=">
+            <menu:item id="i_employee_new" messageCode="global_menu_new" url="/employees?form" z="+S/pgOAdANt9JPGnS20kM8qTu00="/>
+            <menu:item id="i_employee_list" messageCode="global_menu_list" url="/employees?page=1&amp;size=${empty param.size ? 10 : param.size}" z="IfTXfF5mBLDCW+DUkfuN3Wgvias="/>
+        </menu:category>
     </menu:menu>
 </div>

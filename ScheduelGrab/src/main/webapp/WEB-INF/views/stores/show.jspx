@@ -5,5 +5,6 @@
     <page:show id="ps_com_bfi_schedulegrab_domain_Store" object="${store}" path="/stores" z="e1hFmVHul5BfcSgSf1+8m70ZFQc=">
         <field:display field="name" id="s_com_bfi_schedulegrab_domain_Store_name" object="${store}" z="BihqLnuxNPeq7XdlbH+xYyDDO7o="/>
         <field:display field="address" id="s_com_bfi_schedulegrab_domain_Store_address" object="${store}" z="uK8C4Mwwf/kdaq9f+jHYn4ZmVcI="/>
+        <field:display field="assignedManager" id="s_com_bfi_schedulegrab_domain_Store_assignedManager" object="${store}" z="yxPej9bdbo2OOMv68wJfP88iU2I="/>
     </page:show>
 </div>

@@ -57,3 +57,25 @@ service all --interfacePackage com.bfi.schedulegrab.service
 web mvc setup
 web mvc all --package com.bfi.schedulegrab.controller
 web mvc all --package com.bfi.schedulegrab.controller
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-03-18 18:27:01
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-03-21 17:33:48
+hint
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-03-21 18:12:30
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-03-24 11:15:41
+osgi obr url add --url http://spring-roo-repository.springsource.org/repository.xml
+osgi obr start --bundleSymbolicName jackson-core-asl
+osgi obr url remove --url http://spring-roo-repository.springsource.org/repository.xml
+osgi obr url add --url http://spring-roo-repository.springsource.org/repository.xml
+osgi obr start --bundleSymbolicName jackson-mapper-asl
+osgi obr url remove --url http://spring-roo-repository.springsource.org/repository.xml
+osgi obr url add --url http://spring-roo-repository.springsource.org/repository.xml
+osgi obr start --bundleSymbolicName org.springframework.roo.addon.entity
+osgi obr url remove --url http://spring-roo-repository.springsource.org/repository.xml
+osgi obr url add --url http://spring-roo-repository.springsource.org/repository.xml
+osgi obr url add --url http://spring-roo-repository.springsource.org/repository.xml
+osgi obr start --bundleSymbolicName org.springframework.roo.addon.git
+osgi obr url remove --url http://spring-roo-repository.springsource.org/repository.xml
+osgi obr url remove --url http://spring-roo-repository.springsource.org/repository.xml
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-03-24 13:18:26
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-03-24 13:29:13
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-03-24 15:45:50

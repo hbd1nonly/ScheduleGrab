@@ -4,12 +4,18 @@
 package com.bfi.schedulegrab.controller;
 
 import com.bfi.schedulegrab.controller.CustomerController;
+import com.bfi.schedulegrab.domain.Address;
 import com.bfi.schedulegrab.domain.Customer;
+import com.bfi.schedulegrab.service.AddressService;
 import com.bfi.schedulegrab.service.CustomerService;
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import org.joda.time.format.DateTimeFormat;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,6 +29,9 @@ privileged aspect CustomerController_Roo_Controller {
     
     @Autowired
     CustomerService CustomerController.customerService;
+    
+    @Autowired
+    AddressService CustomerController.addressService;
     
     @RequestMapping(method = RequestMethod.POST, produces = "text/html")
     public String CustomerController.create(@Valid Customer customer, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
@@ -38,11 +47,17 @@ privileged aspect CustomerController_Roo_Controller {
     @RequestMapping(params = "form", produces = "text/html")
     public String CustomerController.createForm(Model uiModel) {
         populateEditForm(uiModel, new Customer());
+        List<String[]> dependencies = new ArrayList<String[]>();
+        if (addressService.countAllAddresses() == 0) {
+            dependencies.add(new String[] { "address", "addresses" });
+        }
+        uiModel.addAttribute("dependencies", dependencies);
         return "customers/create";
     }
     
     @RequestMapping(value = "/{id}", produces = "text/html")
     public String CustomerController.show(@PathVariable("id") Long id, Model uiModel) {
+        addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("customer", customerService.findCustomer(id));
         uiModel.addAttribute("itemId", id);
         return "customers/show";
@@ -59,6 +74,7 @@ privileged aspect CustomerController_Roo_Controller {
         } else {
             uiModel.addAttribute("customers", customerService.findAllCustomers());
         }
+        addDateTimeFormatPatterns(uiModel);
         return "customers/list";
     }
     
@@ -89,8 +105,14 @@ privileged aspect CustomerController_Roo_Controller {
         return "redirect:/customers";
     }
     
+    void CustomerController.addDateTimeFormatPatterns(Model uiModel) {
+        uiModel.addAttribute("customer_dob_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+    }
+    
     void CustomerController.populateEditForm(Model uiModel, Customer customer) {
         uiModel.addAttribute("customer", customer);
+        addDateTimeFormatPatterns(uiModel);
+        uiModel.addAttribute("addresses", addressService.findAllAddresses());
     }
     
     String CustomerController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

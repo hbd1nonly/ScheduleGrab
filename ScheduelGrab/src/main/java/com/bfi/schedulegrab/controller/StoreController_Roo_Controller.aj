@@ -5,8 +5,10 @@ package com.bfi.schedulegrab.controller;
 
 import com.bfi.schedulegrab.controller.StoreController;
 import com.bfi.schedulegrab.domain.Address;
+import com.bfi.schedulegrab.domain.Employee;
 import com.bfi.schedulegrab.domain.Store;
 import com.bfi.schedulegrab.service.AddressService;
+import com.bfi.schedulegrab.service.EmployeeService;
 import com.bfi.schedulegrab.service.StoreService;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -31,6 +33,9 @@ privileged aspect StoreController_Roo_Controller {
     @Autowired
     AddressService StoreController.addressService;
     
+    @Autowired
+    EmployeeService StoreController.employeeService;
+    
     @RequestMapping(method = RequestMethod.POST, produces = "text/html")
     public String StoreController.create(@Valid Store store, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
@@ -48,6 +53,9 @@ privileged aspect StoreController_Roo_Controller {
         List<String[]> dependencies = new ArrayList<String[]>();
         if (addressService.countAllAddresses() == 0) {
             dependencies.add(new String[] { "address", "addresses" });
+        }
+        if (employeeService.countAllEmployees() == 0) {
+            dependencies.add(new String[] { "employee", "employees" });
         }
         uiModel.addAttribute("dependencies", dependencies);
         return "stores/create";
@@ -104,6 +112,7 @@ privileged aspect StoreController_Roo_Controller {
     void StoreController.populateEditForm(Model uiModel, Store store) {
         uiModel.addAttribute("store", store);
         uiModel.addAttribute("addresses", addressService.findAllAddresses());
+        uiModel.addAttribute("employees", employeeService.findAllEmployees());
     }
     
     String StoreController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

@@ -5,6 +5,7 @@
     <form:create id="fc_com_bfi_schedulegrab_domain_Store" modelAttribute="store" path="/stores" render="${empty dependencies}" z="dJ729rKjH0JPGSoAHQYJ2fbXWS4=">
         <field:input field="name" id="c_com_bfi_schedulegrab_domain_Store_name" required="true" z="BvtW2XMaBsSj97x/vq7xRMerqBU="/>
         <field:input field="address" id="c_com_bfi_schedulegrab_domain_Store_address" required="true" z="c4CnpCq4HWIuhYC4+TiN3XD+BYE="/>
+        <field:input field="assignedManager" id="c_com_bfi_schedulegrab_domain_Store_assignedManager" required="true" z="ZiaVCDMqX3ZvffailqZxkmanSIw="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_bfi_schedulegrab_domain_Store" render="${not empty dependencies}" z="fYyhpgeuhimKAyQwiDVHqNC6wP4="/>
 </div>

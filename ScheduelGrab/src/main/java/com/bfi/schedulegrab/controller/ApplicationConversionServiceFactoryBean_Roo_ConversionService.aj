@@ -90,7 +90,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Customer, String> ApplicationConversionServiceFactoryBean.getCustomerToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.bfi.schedulegrab.domain.Customer, java.lang.String>() {
             public String convert(Customer customer) {
-                return "(no displayable fields)";
+                return new StringBuilder().append(customer.getFirstName()).append(' ').append(customer.getMiddleName()).append(' ').append(customer.getLastName()).append(' ').append(customer.getDob()).toString();
             }
         };
     }
@@ -114,7 +114,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Employee, String> ApplicationConversionServiceFactoryBean.getEmployeeToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.bfi.schedulegrab.domain.Employee, java.lang.String>() {
             public String convert(Employee employee) {
-                return "(no displayable fields)";
+                return new StringBuilder().append(employee.getFirstName()).append(' ').append(employee.getMiddleName()).append(' ').append(employee.getLastName()).append(' ').append(employee.getDob()).toString();
             }
         };
     }

@@ -4,6 +4,7 @@
 package com.bfi.schedulegrab.domain;
 
 import com.bfi.schedulegrab.domain.Address;
+import com.bfi.schedulegrab.domain.Employee;
 import com.bfi.schedulegrab.domain.Store;
 
 privileged aspect Store_Roo_JavaBean {
@@ -22,6 +23,14 @@ privileged aspect Store_Roo_JavaBean {
     
     public void Store.setAddress(Address address) {
         this.address = address;
+    }
+    
+    public Employee Store.getAssignedManager() {
+        return this.assignedManager;
+    }
+    
+    public void Store.setAssignedManager(Employee assignedManager) {
+        this.assignedManager = assignedManager;
     }
     
 }
