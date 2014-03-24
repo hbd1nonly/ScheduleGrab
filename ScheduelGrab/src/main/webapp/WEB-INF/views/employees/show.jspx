@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_bfi_schedulegrab_domain_Employee" object="${employee}" path="/employees" z="//pCRhRn55iGsW4ijsfAV/lpKXc=">
+        <field:display field="firstName" id="s_com_bfi_schedulegrab_domain_Employee_firstName" object="${employee}" z="Ekns0CeKtnjCCH39TqEudGPz04U="/>
+        <field:display field="middleName" id="s_com_bfi_schedulegrab_domain_Employee_middleName" object="${employee}" z="auOBS1GxyByoDA5sTQ6ecsmXDCs="/>
+        <field:display field="lastName" id="s_com_bfi_schedulegrab_domain_Employee_lastName" object="${employee}" z="bYWgIX8iA8VmF45AYf0DTXN9t0c="/>
+        <field:display field="addresss" id="s_com_bfi_schedulegrab_domain_Employee_addresss" object="${employee}" z="/OrHkw3ekHRRHiR0Ji3LpQcSJ4o="/>
+        <field:display date="true" dateTimePattern="${employee_dob_date_format}" field="dob" id="s_com_bfi_schedulegrab_domain_Employee_dob" object="${employee}" z="/OOYWnIzVb+oHO6KZ12MVnjwY3M="/>
+        <field:display field="status" id="s_com_bfi_schedulegrab_domain_Employee_status" object="${employee}" z="hSNC4l10Ei3vhYuUBCQXEl4XFNQ="/>
+        <field:display field="email" id="s_com_bfi_schedulegrab_domain_Employee_email" object="${employee}" z="eX1x0IROa1BoQKRFs9qCAq46Y5M="/>
+        <field:display field="phoneNumber" id="s_com_bfi_schedulegrab_domain_Employee_phoneNumber" object="${employee}" z="lOuSeXpDLK7iJeuv6sK39yvsAbc="/>
+        <field:display field="employeeType" id="s_com_bfi_schedulegrab_domain_Employee_employeeType" object="${employee}" z="EsDswhfgn0GcwS7wq4D/D7s+m2s="/>
+        <field:display field="defaultStore" id="s_com_bfi_schedulegrab_domain_Employee_defaultStore" object="${employee}" z="eaK/PVN4BEN5BDP4jKatR2JDvnA="/>
+        <field:display field="associatedStores" id="s_com_bfi_schedulegrab_domain_Employee_associatedStores" object="${employee}" z="/nJi+5rCNJ0gfIItT4CyZeXDPfI="/>
+    </page:show>
+</div>

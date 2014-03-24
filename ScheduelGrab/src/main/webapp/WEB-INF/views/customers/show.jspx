@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_bfi_schedulegrab_domain_Customer" object="${customer}" path="/customers" z="QckcWM00uXBBCHJMHNqf9L/FcRg=">
+        <field:display field="firstName" id="s_com_bfi_schedulegrab_domain_Customer_firstName" object="${customer}" z="7qoUNfYFCiEWxhxHb5JiMIflcQE="/>
+        <field:display field="middleName" id="s_com_bfi_schedulegrab_domain_Customer_middleName" object="${customer}" z="1dSEPewXGn0l+wxB0zB9q+APOB0="/>
+        <field:display field="lastName" id="s_com_bfi_schedulegrab_domain_Customer_lastName" object="${customer}" z="hMXvQ+joMhbKP7OyiBMzDkA4Vvg="/>
+        <field:display field="addresss" id="s_com_bfi_schedulegrab_domain_Customer_addresss" object="${customer}" z="7O3geOmmX/2T0MCjr64HUbahWKw="/>
+        <field:display date="true" dateTimePattern="${customer_dob_date_format}" field="dob" id="s_com_bfi_schedulegrab_domain_Customer_dob" object="${customer}" z="ulJvkn/riD+oEs0QhDE592ShpkM="/>
+        <field:display field="status" id="s_com_bfi_schedulegrab_domain_Customer_status" object="${customer}" z="FBJ6DauIc8xT3GTETz37JfMbOV8="/>
+        <field:display field="email" id="s_com_bfi_schedulegrab_domain_Customer_email" object="${customer}" z="y5xHF8zPovbZJP/+it+AnntJZyQ="/>
+        <field:display field="phoneNumber" id="s_com_bfi_schedulegrab_domain_Customer_phoneNumber" object="${customer}" z="+0Fm78tun2vpArWeZuKoPE0bLsQ="/>
+    </page:show>
+</div>

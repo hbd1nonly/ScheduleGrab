@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_bfi_schedulegrab_domain_Employee" items="${employees}" z="bDNXl73uLuYkpuMQV4njH9Wcy8k=">
+        <table:table data="${employees}" id="l_com_bfi_schedulegrab_domain_Employee" path="/employees" z="emll9WXM+P8v8BIXmjIIRnqOKVM=">
+            <table:column id="c_com_bfi_schedulegrab_domain_Employee_firstName" property="firstName" z="ru9HyEImS+VyHtZ6Z3Kc2qLncWg="/>
+            <table:column id="c_com_bfi_schedulegrab_domain_Employee_middleName" property="middleName" z="vWqgNcF6ThwPXdY53InVpRCEANQ="/>
+            <table:column id="c_com_bfi_schedulegrab_domain_Employee_lastName" property="lastName" z="ymUiG1JE6+TuAjkltn6hpj8/m9Q="/>
+            <table:column id="c_com_bfi_schedulegrab_domain_Employee_addresss" property="addresss" z="UM2oFgtnw4IutambbEtkqj5kGYk="/>
+            <table:column date="true" dateTimePattern="${employee_dob_date_format}" id="c_com_bfi_schedulegrab_domain_Employee_dob" property="dob" z="oxYCRypS0Vzyc4E5kLdyu6OHgRo="/>
+            <table:column id="c_com_bfi_schedulegrab_domain_Employee_status" property="status" z="EmPO3uF0oNy+4cEGGIZuACtrrsI="/>
+        </table:table>
+    </page:list>
+</div>
